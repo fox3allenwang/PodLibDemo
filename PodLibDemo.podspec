@@ -6,10 +6,10 @@
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
-Pod::Spec.new do |s|
-  s.name             = 'PodLibDemo'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PodLibDemo.'
+Pod::Spec.new do |spec|
+  spec.name             = 'PodLibDemo'
+  spec.version          = '0.0.2'
+  spec.summary          = 'DemoDemo'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,21 +17,23 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+spec.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/fox3allenwang/PodLibDemo'
+  spec.homepage         = 'https://github.com/fox3allenwang/PodLibDemo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'fox3allenwang' => 'fox3allenwang@gmail.com' }
-  s.source           = { :git => 'https://github.com/fox3allenwang/PodLibDemo.git', :tag => s.version.to_s }
+  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author           = { 'fox3allenwang' => 'fox3allenwang@gmail.com' }
+  spec.source           = { :git => 'https://github.com/fox3allenwang/PodLibDemo.git', :tag => spec.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  spec.ios.deployment_target = '13.0'
 
-  s.source_files = 'PodLibDemo/Classes/**/*'
+  spec.source_files = '**/Classes/**/*.{swift}' 
   
+  spec.frameworks = 'UIKit', 'Foundation', 'CoreBluetooth'
+  spec.dependency 'RealmSwift', '10.20.0'
   # s.resource_bundles = {
   #   'PodLibDemo' => ['PodLibDemo/Assets/*.png']
   # }
